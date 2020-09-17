@@ -1,0 +1,54 @@
+
+.info {
+    max-width: 40rem;
+    padding: 0 3rem;
+    
+}
+
+.img3d_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
+    
+    
+    .img3d_containerimage {
+      max-width: 500px;
+      perspective: 3000px;
+      transform-style: preserve-3d;
+     
+    }
+
+      .imgcontent {
+        width: 100%;
+        transform: rotateX(70deg) rotateZ(-60deg) translate3d(-140px, 0px, 70px);
+        box-shadow: inset 10px 10px 15px 5px rgba(0, 0, 0, 0.4),
+          -80px 60px 15px 5px rgba(0, 0, 0, 0.4);
+        transition: all 0.5s;
+        transform-style: preserve-3d;
+        border-radius: 25px;
+        @media (max-width: 720px) {
+          height: 130px;
+          width: 180px;
+        }
+      }
+      
+      .imgcontent:hover {
+        transform: rotateX(0deg) rotateZ(0) translate3d(0, 0, 0);
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+      }
+      
+    
+  }
+
+  @media all and (max-width: 720px) {
+    .img3d_container {
+      width: auto;
+    }
+    .info {
+        padding: 0 !important;
+    }
+  }

@@ -1,0 +1,11 @@
+p a {
+    color: rgb(41, 41, 41);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+@media all and (max-width: 720px) {
+    h1 , h2 {
+        font-size: 1.5rem !important;
+    }
+}
