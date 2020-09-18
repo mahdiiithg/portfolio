@@ -40,7 +40,7 @@ const SocialWrapper = styled.div`
   margin: 5rem 0;
 
   @media ${props => props.theme.mediaQueries.medium} {
-    display: block;
+    
     margin: 3rem 0;
   }
 
