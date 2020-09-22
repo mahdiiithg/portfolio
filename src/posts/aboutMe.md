@@ -1,6 +1,6 @@
 ---
-title: 'Mahdi'
 stack: 'HTML5 - CSS3 - JAVASCRIPT - SASS - WEBPACK - REACTJS - REDUX - STYLED COMPONENTS - CSS MODULES - FIREBASE - BABEL - GRAPHQL - GATSBY'
+title: 'Mahdi'
 ---
 
 I’m <span>Mahdi</span> , a 26 years old _self-taught_ <span>Front-end</span> developer.

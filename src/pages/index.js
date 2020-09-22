@@ -32,6 +32,46 @@ const CustomSpan = styled.span`
   }
 `;
 
+const StackTitle = styled.h3`
+  font-weight: 600;
+  color: var(--text-highlight);
+  margin-top: 5rem;
+  font-size: 1.7rem;
+  transition: color 0.2s ease-out;
+
+  @media ${props => props.theme.mediaQueries.small} {
+    font-size: 1.3rem;
+    margin-top: 3rem;
+  }
+
+  @media ${props => props.theme.mediaQueries.smallest} {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+`;
+
+const Stack = styled.p`
+  color: var(--primary);
+  width: 75%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  font-weight: 700;
+
+  @media ${props => props.theme.mediaQueries.small} {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+
+  @media ${props => props.theme.mediaQueries.smallest} {
+    font-size: 1rem;
+  }
+`;
+
+
+
 
 // Takes custom components from markdown, and maps to my custom components
 const renderCustom = new rehypeReact({
@@ -41,12 +81,14 @@ const renderCustom = new rehypeReact({
 
 
 const Home = ({data}) => {
+  console.log(data);
   return (
     <Layout>
       <h2 className='pb-2'>{data.site && data.site.siteMetadata.title }</h2>
       <div className="d-lg-flex d-md-block justify-content-between">
         <div className={ImageStyle.info}>
         {data.aboutMe && renderCustom(data.aboutMe.childMarkdownRemark.htmlAst)}
+       
         </div>
         <div className={ImageStyle.img3d_container}>
           <div className={ImageStyle.img3d_containerimage}>
@@ -55,6 +97,11 @@ const Home = ({data}) => {
           <h6 className="text-center">To see me hover o click on my picture</h6>
         </div>
       </div>
+      <StackTitle>
+      My current <span>stack</span> of{' '}
+      <span>languages/technologies</span> is:
+    </StackTitle>
+    <Stack>{data.aboutMe.childMarkdownRemark.frontmatter.stack}</Stack>
     </Layout>
   )
 }
@@ -65,6 +112,7 @@ query {
     childMarkdownRemark {
       frontmatter {
         title
+        stack
       }
       htmlAst
     }
