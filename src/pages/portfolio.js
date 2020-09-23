@@ -1,18 +1,30 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components';
 import Layout from '../components/layout'
 import PortfolioItem from '../templates/portfolioItem'
+
+
+const PortfolioWrapper = styled.div`
+  width: 100%;
+
+  & > div:nth-child(odd) > div {
+    flex-direction: row-reverse;
+  }
+`;
 
 const portfolio = ({data}) => {
     return (
         <Layout>
             <h1>Portfolio is here</h1>
-            {data.allFile && data.allFile.edges.map(item => (
-                <PortfolioItem
-                  key={item.node.id}
-                  portfolio={item.node.childMarkdownRemark}
-                />
-              ))}
+            <PortfolioWrapper>
+              {data.allFile && data.allFile.edges.map(item => (
+                  <PortfolioItem
+                    key={item.node.id}
+                    portfolio={item.node.childMarkdownRemark}
+                  />
+                ))}
+            </PortfolioWrapper>
         </Layout>
     )
 }
