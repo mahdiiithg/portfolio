@@ -71,8 +71,6 @@ const Stack = styled.p`
 `;
 
 
-
-
 // Takes custom components from markdown, and maps to my custom components
 const renderCustom = new rehypeReact({
   createElement: React.createElement,
@@ -81,7 +79,6 @@ const renderCustom = new rehypeReact({
 
 
 const Home = ({data}) => {
-  console.log(data);
   return (
     <Layout>
       <h2 className='pb-2'>{data.site && data.site.siteMetadata.title }</h2>

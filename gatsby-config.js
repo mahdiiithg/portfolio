@@ -8,8 +8,8 @@ module.exports = {
   siteMetadata: {
       title: `Mahdi | Front-end Developer`,
       description: `I’m Mahdi, a 26 years old self-taught Front-end developer`,
-      author: `Mahdi`,
-      siteUrl: 'https://Mahdi.dev',
+      author: `Mahdi Tahavorgar`,
+      siteUrl: 'https://codethg.netlify.app',
       social: {
         twitter: '@Thg_code',
         instagram: 'code_thg',
@@ -18,6 +18,7 @@ module.exports = {
         github: 'MahdiiiThg',
         email: 'mahditahavorgar@gmail.com'
       },
+      imageShare: `darkLogo.png`
     },
     plugins: [
       `gatsby-plugin-sass`,
@@ -61,5 +62,18 @@ module.exports = {
         trackingId: process.env.GA_TRACKING_ID,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Mahdi | Front-end Developer`,
+        short_name: `Mahdi Tahavorgar`,
+        icon: `src/assets/images/lightLogo.png`,
+        start_url: `/`,
+        background_color: `#212121`,
+        theme_color: `#127EB1`,
+        display: `minimal-ui`
+      }
+    },
+    `gatsby-plugin-offline`
   ],
 }
