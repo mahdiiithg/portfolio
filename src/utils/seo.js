@@ -22,7 +22,6 @@ const SEO = ({ meta, lang, title }) => {
       }
     `
   );
-  console.log(site);
 
   const metaDescription = site.siteMetadata.description;
   const metaImage = `${site.siteMetadata.siteUrl}/${
