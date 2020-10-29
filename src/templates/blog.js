@@ -8,7 +8,7 @@ const BlogTemplate = ({ data }) => {
     return (
         <Layout>
             {post && 
-              <div>
+              <div key={post.frontmatter.title} style={post.frontmatter.lang === 'fa' ? {textAlign: 'right'} :  {textAlign: 'left'}} >
                 <h1>{post.frontmatter.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
@@ -24,6 +24,7 @@ query($slug: String!) {
     html
     frontmatter {
       title
+      lang
     }
   }
 }

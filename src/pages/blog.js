@@ -11,7 +11,7 @@ const blog = ({data}) => {
             {data.allMarkdownRemark && 
               data.allMarkdownRemark.edges.map( item => {
                 return (
-                  <Link to={`${item.node.fields.slug}`}>
+                  <Link key={item.node.frontmatter.title} to={`${item.node.fields.slug}`}>
                     <li>
                       <h3>{item.node.frontmatter.title}</h3>
                       <p>{item.node.frontmatter.date}</p>
