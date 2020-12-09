@@ -1,6 +1,6 @@
 ---
 title: 'React - Movie Library'
-live: 'https://react-movie-library.netlify.app/'
+live: ''
 source: 'https://github.com/MahdiiiThg/React-movie-library'
 stack: 'React - Redux - Styled Components'
 image: 'movies.png'
