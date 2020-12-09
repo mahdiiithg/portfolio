@@ -63,6 +63,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-4060162450917193`
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Mahdi | Front-end Developer`,
