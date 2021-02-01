@@ -2,7 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from '../components/layout'
-import IMG from '../assets/images/IMG.jpg';
+import IMG from '../assets/images/IMG.png';
 import ImageStyle from '../styles/imageProfile.module.scss'
 import rehypeReact from 'rehype-react';
 import styled from 'styled-components';
