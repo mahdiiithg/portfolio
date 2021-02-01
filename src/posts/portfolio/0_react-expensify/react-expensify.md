@@ -6,4 +6,4 @@ stack: 'React - Redux - firebase - Airbnb components'
 image: 'react-expensify.png'
 ---
 
-A todo App, where the user has the ability to Add/Edit/Delete todos. Todos are saved to the Firestore, so the user can basically login anywhere and have access to his todos. The App uses Firebase for the Authentication system.
+An Expens Management webApp, where the user has the ability to Add/Edit/Delete expenses. expenses are saved to the Firestore, so the user can basically login anywhere and have access to his data. The App uses Firebase for the Authentication system.
